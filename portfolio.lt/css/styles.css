@@ -1,0 +1,451 @@
+#tinyeditor {border:none; margin:0; padding:0; font:14px 'Courier New',Verdana}
+.tinyeditor {border:1px solid #bbb; padding:0 1px 1px; font:12px Verdana,Arial}
+.tinyeditor iframe {border:none; overflow-x:hidden}
+.tinyeditor-header {height:31px; border-bottom:1px solid #bbb; background:url(images/header-bg.gif) repeat-x; padding-top:1px}
+.tinyeditor-header select {float:left; margin-top:5px}
+.tinyeditor-font {margin-left:12px}
+.tinyeditor-size {margin:0 3px}
+.tinyeditor-style {margin-right:12px}
+.tinyeditor-divider {float:left; width:1px; height:30px; background:#ccc}
+.tinyeditor-control {float:left; width:34px; height:30px; cursor:pointer; background-image:url(images/icons.png)}
+.tinyeditor-control:hover {background-color:#ccc; background-position:30px 0}
+.tinyeditor-footer {height:32px; border-top:1px solid #bbb; background:#f5f5f5}
+.toggle {float:left; background:url(images/icons.png) -34px 2px no-repeat; padding:9px 13px 0 31px; height:23px; border-right:1px solid #ccc; cursor:pointer; color:#666}
+.toggle:hover {background-color:#fff}
+.resize {float:right; height:32px; width:32px; background:url(images/resize.gif) 15px 15px no-repeat; cursor:s-resize}
+#editor {cursor:text; margin:10px}
+#scripinty {height:130px; width:100%; position:fixed; bottom:0; left:0; margin:0; background:#666; min-width:900px; z-index:9999}
+#scripintyleft {float:left; padding:30px 0 0 35px}
+#scripintyleft h1 {font:32px 'Trebuchet MS',Verdana; color:#fff; text-shadow:1px 1px #000}
+#scripintyleft p {color:#aaa; font-size:16px; font-style:italic}
+#scripintyleft p a {color:#eee; text-decoration:none}
+#scripintyleft p a:hover {color:#fff}
+#scripintyleft span {font:15px Arial,Verdana; color:#ddd; text-shadow:1px 1px #444}
+#scriptinyright {float:right; padding:10px 15px 0; height:120px; width:300px; background:#555}
+#bsap_aplink {float:right; font-size:10px; margin:0; padding:4px 0 0; color:#eee; text-shadow:none}
+#bsap_aplink:hover {color:#fff}
+body .one .bsa_it_ad {border:none; background:transparent; font-family:inherit; padding:0; margin:0; text-align:right}
+body .one .bsa_it_ad .bsa_it_i {float:right; padding:0; margin:0 0 0 13px}
+body .one .bsa_it_ad .bsa_it_i img {padding:0; border:none; margin-top:3px}
+body .one .bsa_it_ad .bsa_it_t {padding:0; font-size:13px; color:#eee; text-shadow:1px 1px #444; margin-bottom:6px}
+body .one .bsa_it_ad .bsa_it_t:hover {color:#fff}
+body .one .bsa_it_p {display:none}
+body .one .bsa_it_ad .bsa_it_d {font:12px Arial,Verdana; color:#ccc; text-shadow:#444 1px 1px}
+.add_insert{width:468px;height:60px;float:left;border:0px solid red;margin-left: 492px;margin-top: -42px;}
+#vortex {
+    display: block;
+    width: 27%;
+    height: auto;
+    position: relative;
+    margin-left: 70%;
+    margin-bottom: 25px;
+}
+#home{
+    height: 420px;
+}
+#vortex.vortex-animating > * {
+}
+ .vortex-image{
+   width: 25%;
+   height: auto;   
+}
+.vortex-image:hover{
+    cursor: pointer;
+}
+.skills-list{
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+    width: 70%;
+    height: auto;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.skills-list li{
+    float: left;
+    width: 25%;
+}
+.skill-image{
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    opacity: .5;
+}
+.skill-description{
+    display: block;
+    text-align: justify;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+    padding-bottom: 25px;
+    font-size: 16px;
+}
+hr{
+   
+}
+.skill-image:hover{
+    padding: 0;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    opacity: 1;
+}
+.skills-list li a{
+    display: block;
+    color: aliceblue;
+    border-collapse: collapse;
+}
+.active{
+    padding: 0;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    opacity: 1;
+}
+.some-home-text{
+    float: left;
+    margin-left: 5%;
+    text-align: justify;
+    width: 60%;
+    padding: 2% 50px 50px 50px;
+}
+h2{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+#home.jumbotron{
+     margin-top: 45px;
+}
+.main{
+    overflow: hidden;
+}
+.about{
+   float: right;
+   width: 30%;
+}
+.my-photo{
+    float: left;
+    margin-left: 10%;
+    margin-bottom: 25px;
+    width: 30%;
+}
+.ar-about{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+    clear: both;
+}
+#slides img{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+#slides li{
+    list-style: none;
+}
+.project{
+    width: 100%;
+    position: relative;
+    z-index: 0;
+}
+.project ul{
+    width: 100%;
+}
+.project ul li{
+    position: relative;
+    z-index: 1;
+    width: 33%;
+    float: left;
+    padding: 10px;
+}
+.project li:hover{
+    width: 70%;
+    z-index: 2;
+}
+#experience-view{
+    width: 80%;
+    margin: 0 auto 0 auto;
+    height: 450px;
+}
+#experience-view a{
+    margin: 5px;
+}
+#experience-view li{
+    list-style: none;
+    float: left;
+    margin: 5px;
+}
+.experience{
+    
+}
+#experience{
+    height: auto;
+}
+.bxslider img{
+    height: auto;
+    position: relative;
+    width: 80%;
+    margin:10%;
+}
+.experience-info{
+    width: 60%;
+    margin-left: 10%;
+}
+.image-container{
+    position: relative;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: auto;
+    float: left;
+    z-index: 0;
+}
+.experience-desc{
+    width: 80%;
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 10%;
+    float: left;
+    height: auto;
+}
+.bx-viewport{
+    height: auto;
+}
+.bx-wrapper{
+    height: auto;
+}
+.image-container .image2{
+}/*
+.image:hover{
+   width: 100%;
+   height: 100%;
+   margin: 0 0 8.5% 0 ;
+}*/
+.image-box1{
+    width: 33%;
+    float: left;
+}
+.image{
+    max-height: 180px;
+}
+.image-box2{
+    width: 33%;
+    float: left;
+    margin-top: 120px;
+    margin-bottom: 15px;
+}
+.image-box3{
+    width: 33%;
+    float: left;
+}
+.image2{
+}
+.tablet-view{
+    display: none;
+    width: 100%;
+    margin-top: 50px;
+}
+.form-horizontal{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.login-body{
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.login{
+    display: table-cell;
+    vertical-align: middle;
+    
+}
+.login-form{
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.log-info{
+    position: fixed;
+    z-index: 9999;
+    right: 50px;
+}
+.right{
+    float: right;
+}
+.log-out{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    line-height: 15px;
+    padding: 10px 10px;
+}
+#combox-tog{
+    width: 100%;
+}
+#combox{
+    width: 100%;
+}
+.image{
+    width: 60%;
+    max-width: 150px;
+    height: auto;
+    margin: 5px;
+    padding-bottom: 10px;
+}
+input.image-upload{
+    display: none;
+}
+.alert-box{
+    display: none;
+}
+@media screen and (max-width: 1024px) {
+    #vortex{
+        
+    }
+    .some-home-text{
+   
+    }
+     .bx-next{
+        display: none;
+    }
+    .bx-prev{
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    #vortex{
+        width: 33%;
+        height: 150px;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: 10%;
+    }
+     .vortex-image{
+        width: 50px;
+        height: auto;
+    }
+    .some-home-text{
+        margin-left: 2.5%;
+    }
+    .bx-next{
+        display: none;
+    }
+    .bx-prev{
+        display: none;
+    }
+}
+@media screen and (max-width: 480px) {
+    #vortex{
+        margin: 0;
+        padding: 0;
+        width: 50%;
+        height: 150px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+      /*  padding-top: 170px;*/
+    }
+    .vortex-image{
+        width: 35px;
+        height: auto;
+    }
+    .some-home-text{
+        margin-top: 170px;
+        width: 100%;
+    }
+    #vortex.vortex-animating > * {
+    }
+    #home{
+        width: 100%;
+        height: 650px;
+    }
+    .my-photo{
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    .about{
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-bottom: 15px;
+    }
+    .ar-about{
+        text-align: justify;
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .bx-next, .bx-prev{
+        display: none;
+    }
+    .some-home-text{
+        margin-left: 0;
+    }
+}
+.open{
+    display: block;
+}
+input.open{
+    display: block;
+}
+.left{
+    float: left;
+}
+.lang-img{
+    width: 25px;
+    height: auto;
+}
+.lang-img:hover{
+    cursor: pointer;
+}
+.settings-img{
+   /* padding: 10px 10px;*/
+}
+.settings-img:hover{
+    opacity: 0.75;
+    cursor: pointer;
+}
+.save{
+    max-width: 65px;
+  /*  max-height: 38px;*/
+}
+.delete{
+     max-width: 65px;
+}
+.delete:hover{
+    opacity: 0.75;
+    cursor: pointer;
+}
+.save:hover{
+    cursor: pointer;
+    opacity: 0.75;
+}
+.ok-msg{
+    display: none;
+    max-width: 65px;
+}
+.center{
+    text-align: center;
+}
+.whide{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#combox{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}

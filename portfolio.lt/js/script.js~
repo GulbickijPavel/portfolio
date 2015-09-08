@@ -1,0 +1,97 @@
+$(document).ready(function(){
+    $('article#slide0-desc.project-description').toggleClass('open');
+    $('.sub-menu-item').click(function(){
+        console.log("click");
+        $('.sub-sub-menu-item').toggleClass('open');
+    
+    });
+    /*********** skills ************/
+     $('.skill-image').click(function(){
+        var id = $(this).attr('id');
+        $('.skill-description.open').removeClass("open");
+        $('.skill-image.active').removeClass("active");
+       /*  console.log(id);
+         console.log('article#'+id+'.skill-description');*/
+        $('article#'+id+'-desc'+'.skill-description').toggleClass('open');
+        $('img#'+id+'.skill-image').toggleClass('active');
+    });
+    /*************** Menu *****************/
+    $(".menu_item").on("click", function(e) {
+        e.preventDefault();
+        var scrollTarget = $(this).attr('href');
+        console.log(scrollTarget);
+        $(scrollTarget).velocity("scroll", { 
+         //   container: $("#main"),
+            duration: 900
+        });
+    });
+    /*************** slider **************/
+    $('.bxslider').bxSlider();
+
+    /*************** SMART WIEV****************/
+  /*  $(window).resize(function(){
+        var dimensions = $(window).width();
+        console.log(screen);
+        console.log(dimensions);
+        console.log(screen.width);
+        var container = document.getElementById('smart-view'),
+            about = document.getElementById('about'),
+            skills = document.getElementById('skills'),
+            experience = document.getElementById('experience'),
+            projects = document.getElementById('projects'),
+            about = document.getElementById('about');
+        if (screen && screen.width < 780 || dimensions < 780) {
+            console.log('mobile');
+            container.innerHTML = container.innerHTML + about.innerHTML + skills.innerHTML + experience.innerHTML + projects.innerHTML + about.innerHTML;
+        $("#smart-view").slidesjs({
+            width: 780,
+            height: 528
+          });
+        }
+       else{
+            console.log('not-mobile');
+            $("#smart-view").toggleClass('hidden');
+           container.innerHTML = '';
+       }
+    });
+    /**************** Vortex ****************/
+     $('.vortex-image').on("click", function(e) {
+        var id = $(this).attr('id');
+        console.log(id);
+        
+        $("#skills").velocity("scroll", { 
+          /*  container: $("#main"),*/
+            duration: 900
+        });
+        $('.skill-description.open').removeClass("open");
+        $('.skill-image.active').removeClass("active");
+        $('article#'+id+'-desc'+'.skill-description').toggleClass('open');
+        $('img#'+id+'.skill-image').toggleClass('active');            
+    });
+     $('#vortex').vortex({
+        initialPosition: 270,
+        speed: 450
+     });
+    $('.vortex-image').mouseover(function(){
+        $('#vortex').data('vortex').stop();
+    }).mouseout(function(){
+        $('#vortex').data('vortex').start()});
+   $(window).resize(function(){location.reload();});
+    /************** Slider ***********/
+        $(function() {
+            $('.banner').unslider({
+                speed: 500,             
+                delay: 3000,              
+                complete: function() {},  
+                keys: true,              
+                dots: true,              
+                fluid: true
+            });
+        });
+        var unslider = $('.banner').unslider();
+        $('.unslider-arrow').click(function() {
+            var fn = this.className.split(' ')[1];
+            //  Either do unslider.data('unslider').next() or .prev() depending on the className
+            unslider.data('unslider')[fn]();
+        });
+});

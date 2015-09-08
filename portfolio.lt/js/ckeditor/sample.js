@@ -1,0 +1,34 @@
+/**
+ * Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+ * For licensing, see LICENSE.md or http://ckeditor.com/license
+ */
+
+/* exported initSample */
+
+if ( CKEDITOR.env.ie && CKEDITOR.env.version < 9 )
+	CKEDITOR.tools.enableHtml5Elements( document );
+
+// The trick to keep the editor in the sample quite small
+// unless user specified own height.
+CKEDITOR.config.height = 150;
+CKEDITOR.config.width = 'auto';
+
+function initSample(lang) {
+	var wysiwygareaAvailable = isWysiwygareaAvailable(),
+		isBBCodeBuiltIn = !!CKEDITOR.plugins.get( 'bbcode' ),
+		editorElement = CKEDITOR.document.getById( 'editor-'+lang+'' );
+		
+		if ( wysiwygareaAvailable ) {
+			CKEDITOR.replace( 'editor-'+lang+'' );
+		} else {
+			editorElement.setAttribute( 'contenteditable', 'true' );
+			CKEDITOR.inline( 'editor-'+lang+'' );
+		}
+	function isWysiwygareaAvailable() {
+		if ( CKEDITOR.revision == ( '%RE' + 'V%' ) ) {
+			return true;
+		}
+		return !!CKEDITOR.plugins.get( 'wysiwygarea' );
+	}
+};
+
